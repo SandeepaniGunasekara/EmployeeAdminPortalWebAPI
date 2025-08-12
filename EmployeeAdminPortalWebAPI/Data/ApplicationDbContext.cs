@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 namespace EmployeeAdminPortalWebAPI.Data
 {
     public class ApplicationDbContext :DbContext
-    { 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
-        {
-        }
+   
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options) { }
 
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; } = default!;
     }
 }
