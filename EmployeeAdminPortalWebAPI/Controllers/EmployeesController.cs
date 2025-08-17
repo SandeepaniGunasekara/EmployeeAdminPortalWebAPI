@@ -26,7 +26,7 @@ namespace EmployeeAdminPortalWebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{id:guid }")]
+        [Route("{id:guid}")]
         public IActionResult GetEmployeeById(Guid id)
         {
             var employee = dbContext.Employees.Find(id);
@@ -56,7 +56,7 @@ namespace EmployeeAdminPortalWebAPI.Controllers
 
 
         [HttpPut]
-        [Route("{id:guid }")]
+        [Route("{id:guid}")]
         public IActionResult UpdateEmployee(Guid id, UpdateEmployeeDto updateEmployeeDto)
 
         {
@@ -75,7 +75,7 @@ namespace EmployeeAdminPortalWebAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:guid }")]
+        [Route("{id:guid}")]
         public IActionResult DeleteEmployee(Guid id)
         {
             var employee = dbContext.Employees.Find(id);
